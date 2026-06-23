@@ -18,6 +18,9 @@ for(const button of numberButtons){
 /**implementing clear and delete buttons */
 clear.addEventListener("click", function(){
     display.value = ""
+    firstOperand = null;
+    secondOperand = null;
+    selectedOperator = null;
 })
 
 del.addEventListener("click", function(){
@@ -37,11 +40,12 @@ for(const button of operatorButtons){
     }
 let secondOperand;
 isEqual.addEventListener("click", function(){
+    if(selectedOperator === null){
+        return
+    }
     secondOperand = display.value;
     display.value = operate(firstOperand, selectedOperator, secondOperand)
-    
-    
-
+    selectedOperator = null;
 })
 
 function operate(firstOperand, selectedOperator, secondOperand){
