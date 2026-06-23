@@ -38,9 +38,28 @@ for(const button of operatorButtons){
 let secondOperand;
 isEqual.addEventListener("click", function(){
     secondOperand = display.value;
-   
+    display.value = operate(firstOperand, selectedOperator, secondOperand)
     
     
 
 })
+
+function operate(firstOperand, selectedOperator, secondOperand){
+
+    firstOperand = Number(firstOperand);
+    secondOperand = Number(secondOperand);
+
+    if(selectedOperator === "+"){
+        return firstOperand + secondOperand;
+    }
+    else if(selectedOperator === "-"){
+        return firstOperand - secondOperand
+    }
+    else if(selectedOperator === "x"){
+        return firstOperand * secondOperand
+    }
+    else if(selectedOperator === "/"){
+        return firstOperand / secondOperand
+    }
+    } 
 
