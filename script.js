@@ -35,3 +35,12 @@ for(const button of operatorButtons){
 
         })
     }
+let secondOperand;
+isEqual.addEventListener("click", function(){
+    secondOperand = display.value;
+   
+    
+    
+
+})
+
