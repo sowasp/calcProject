@@ -77,10 +77,10 @@ function operate(firstOperand, selectedOperator, secondOperand){
         return firstOperand - secondOperand
     }
     else if(selectedOperator === "x"){
-        return firstOperand * secondOperand
+        return Number((firstOperand * secondOperand).toFixed(7))
     }
     else if(selectedOperator === "/"){
-        return firstOperand / secondOperand
+        return Number((firstOperand / secondOperand).toFixed(7))
     }
     } 
 
