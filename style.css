@@ -1,8 +1,17 @@
+body{
+    display:flex;
+    justify-content: center;
+}
+
 .calc-base{
     display:flex;
+    background-color: grey;
     flex-direction: column;
     align-items: center;
-    gap: 20px
+    gap: 20px;
+    padding-bottom: 50px;
+    width: 400px;
+    
 
     
 }
@@ -26,6 +35,7 @@
 }
 
 #pad {
+
     display:flex;
     gap: 8px;
     align-items: flex-start;
@@ -46,4 +56,9 @@
     gap: 8px;
     
    
+}
+
+#equal {
+    width: 148px;
+    height: 70px
 }
