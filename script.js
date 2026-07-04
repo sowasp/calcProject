@@ -34,13 +34,18 @@ del.addEventListener("click", function(){
 
 for(const button of operatorButtons){
     button.addEventListener("click", function(){
-        firstOperand = display.value;
-        selectedOperator = button.textContent;
-        display.value = ""
-
-
-        })
-    }
+        if(selectedOperator !== null){
+            secondOperand = display.value
+            firstOperand = operate(firstOperand, selectedOperator, secondOperand)
+            selectedOperator = button.textContent
+            
+        } else {
+            firstOperand = display.value;
+            selectedOperator = button.textContent;
+            display.value = ""
+        }
+    })
+}
 
 isEqual.addEventListener("click", function(){
     if(selectedOperator === null || display.value === ""){
