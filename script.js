@@ -6,6 +6,10 @@ const del = document.querySelector("#delete")
 const point = document.querySelector("#point")
 const isEqual = document.querySelector("#equal")
 
+let firstOperand = null;
+let secondOperand = null;
+let selectedOperator = null;
+
 
 
 /* making each number button functional and appending each num one after the other with += */
@@ -27,8 +31,7 @@ del.addEventListener("click", function(){
    display.value = display.value.slice(0, -1)
 })
 
-let firstOperand;
-let selectedOperator;
+
 for(const button of operatorButtons){
     button.addEventListener("click", function(){
         firstOperand = display.value;
@@ -38,9 +41,9 @@ for(const button of operatorButtons){
 
         })
     }
-let secondOperand;
+
 isEqual.addEventListener("click", function(){
-    if(selectedOperator === null){
+    if(selectedOperator === null || display.value === ""){
         return
     }
     secondOperand = display.value;
