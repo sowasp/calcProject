@@ -31,9 +31,17 @@ del.addEventListener("click", function(){
    display.value = display.value.slice(0, -1)
 })
 
+point.addEventListener("click", function(){
+    if(display.value.includes(".")){
+        return
+    }
+    display.value += "."
+})
 
+/**selecting operator and implementating concatenated operations */
 for(const button of operatorButtons){
     button.addEventListener("click", function(){
+        /**if an operator has already been selected... */
         if(selectedOperator !== null){
             secondOperand = display.value
             firstOperand = operate(firstOperand, selectedOperator, secondOperand)
