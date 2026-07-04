@@ -60,9 +60,15 @@ isEqual.addEventListener("click", function(){
     if(selectedOperator === null || display.value === ""){
         return
     }
+
     secondOperand = display.value;
-    display.value = operate(firstOperand, selectedOperator, secondOperand)
-    selectedOperator = null;
+    if(secondOperand === "0" && selectedOperator === "/"){
+        display.value = "ERROR"
+        
+    } else {
+        display.value = operate(firstOperand, selectedOperator, secondOperand)
+        selectedOperator = null;
+    }
 })
 
 function operate(firstOperand, selectedOperator, secondOperand){
