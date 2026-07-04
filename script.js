@@ -38,6 +38,7 @@ for(const button of operatorButtons){
             secondOperand = display.value
             firstOperand = operate(firstOperand, selectedOperator, secondOperand)
             selectedOperator = button.textContent
+            display.value = "";
             
         } else {
             firstOperand = display.value;
